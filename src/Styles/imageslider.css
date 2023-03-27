@@ -1,0 +1,25 @@
+.slider-container {
+  /* max-width: 100%; */
+  /* max-height: 36rem;
+  position: relative;
+  overflow: hidden; */
+}
+
+.slider-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-img {
+  flex: 0 0 100%;
+  height: auto;
+}

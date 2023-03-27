@@ -1,0 +1,159 @@
+.about-container {
+  /* padding: 10rem; */
+  background-color: rgba(237, 237, 237, 0.455);
+}
+/* Dark theme styles */
+
+.about-container.dark-theme {
+  background-color: #222;
+  color: #eee;
+}
+
+.about-title {
+  padding-top: 8rem;
+  font-size: 1.8rem;
+}
+
+.description {
+  font-weight: 600;
+  /* padding-top: 4rem; */
+  /* padding-right: 10rem;
+  padding-top: 5rem; */
+  font-size: 3rem;
+}
+.sub-description {
+  font-size: 1.4rem;
+  color: rgb(83, 82, 82);
+}
+
+.description-container {
+  padding-right: 14rem;
+  /* min-width: 40rem; */
+  /* display: flex; */
+}
+.flex-container {
+  padding: 10rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.slider-container {
+  width: 30rem;
+  height: 20rem;
+}
+
+/* toggle */
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 0.5rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggle-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+/* toggle */
+
+/* smaller desktops */
+
+@media (max-width: 84em) {
+  .flex-container {
+    padding: 10rem 2rem;
+    display: flex;
+    justify-content: center;
+    /* width: 90%; */
+  }
+  .description-container {
+    padding-right: 8rem;
+    /* min-width: 40rem; */
+    /* display: flex; */
+  }
+  .slider-container {
+    width: 28rem;
+    height: 18rem;
+  }
+}
+
+/* phones */
+@media (max-width: 40em) {
+  .flex-container {
+    /* padding: 0rem 2rem; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    /* width: 90%; */
+  }
+  .description-container {
+    /* padding-right: 0; */
+    /* min-width: 40rem; */
+    /* display: flex; */
+  }
+  .slider-container {
+    width: 18rem;
+    height: 14rem;
+    padding-bottom: 4rem;
+  }
+}

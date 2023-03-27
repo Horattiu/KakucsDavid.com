@@ -1,0 +1,67 @@
+.contact-container.dark-theme {
+  background-color: #222;
+  color: #eee;
+}
+.contact-title {
+  display: flex;
+  justify-content: center;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+.contact-info {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  justify-content: center;
+  background-color: rgb(242, 242, 242);
+}
+.icons-box {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+.bottom-text {
+  color: rgb(88, 88, 88);
+}
+
+.icons-text-container {
+  flex-direction: column;
+}
+.icons-text {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  font-weight: 600;
+}
+
+.line {
+  border-top: 1px solid rgb(170, 170, 170);
+}
+.test {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-video {
+  width: 100%;
+  height: auto;
+}
+.video-container {
+  width: 50rem;
+}
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+.contact-info2 {
+  padding-top: 0;
+  padding-right: 2.4rem;
+}
+.mail {
+}
