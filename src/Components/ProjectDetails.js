@@ -83,19 +83,20 @@ const ProjectDetails = () => {
     <div className="project-details">
       <div className="position-cont">
         <div className="test">
-          <h2>{project.title}</h2>
-          <p>{project.description}</p>
+          <h2 className="project-title-details">{project.title}</h2>
+          <p className='project-details'>{project.description}</p>
         </div>
         {project.images.map((image, index) => (
           <div className="project-box" key={index}>
             <img src={image} loading="lazy" alt={`${project.title} ${index}`} />
           </div>
         ))}
-        {project.video && (
-          <video controls autoPlay loop muted className="video">
-            <source src={project.videoUrl} type="video/mp4" />
-          </video>
-        )}
+        {project.videoUrls &&
+          project.videoUrls.map((url, index) => (
+            <video controls loop muted className="video" key={index}>
+              <source src={url} type="video/mp4" />
+            </video>
+          ))}
       </div>
     </div>
   );

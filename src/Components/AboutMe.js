@@ -22,16 +22,20 @@
 
 // export default AboutMe;
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Styles/about.css';
 import ImageSlider from './ImageSlider';
+import AOS from 'aos';
 
 const AboutMe = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
-  const handleToggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
-  };
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <div
@@ -40,21 +44,15 @@ const AboutMe = () => {
         isDarkTheme ? 'dark-theme' : 'light-theme'
       }`}
     >
-      <div className="toggle-container">
-        <label className="switch">
-          <input
-            type="checkbox"
-            onClick={handleToggleTheme}
-            checked={isDarkTheme}
-          />
-          <span className="slider round"></span>
-        </label>
-        <span className="toggle-label">Toggle Theme</span>
-      </div>
       <div className="flex-container">
         <div className="description-container">
           <p className="description">Hello, I'm David</p>
-          <p className="sub-description">freelance Graphic Designer</p>
+          <p className="sub-description">freelance graphic designer</p>
+          <p className="descriptionnn" data-aos="fade-up">
+            I am assisting brands and businesses in transforming their ideas
+            into reality by developing long-lasting, unique visual identities
+            and inspiring worlds that captivate their target audience.
+          </p>
         </div>
         <ImageSlider />
       </div>

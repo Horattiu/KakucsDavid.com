@@ -1,36 +1,60 @@
+.flex-container {
+  position: relative;
+}
 .about-container {
   /* padding: 10rem; */
-  background-color: rgba(237, 237, 237, 0.455);
-}
-/* Dark theme styles */
-
-.about-container.dark-theme {
-  background-color: #222;
-  color: #eee;
+  background-color: rgb(35, 35, 35);
 }
 
 .about-title {
-  padding-top: 8rem;
+  /* padding-top: 8rem; */
   font-size: 1.8rem;
 }
 
 .description {
+  padding-left: 0;
   font-weight: 600;
-  /* padding-top: 4rem; */
-  /* padding-right: 10rem;
-  padding-top: 5rem; */
-  font-size: 3rem;
+
+  font-size: 4rem;
+  color: white;
 }
 .sub-description {
   font-size: 1.4rem;
   color: rgb(83, 82, 82);
+  color: white;
 }
+.descriptionn {
+  /* padding: 0; */
+  font-weight: 600;
+  color: white;
+
+  font-size: 2.8rem;
+}
+.descriptionnn {
+  padding-top: 19rem;
+  /* align-items: flex-end; */
+  font-size: 0.9rem;
+  color: rgb(175, 175, 175);
+}
+/* .descriptionnn {
+  font-size: 1rem;
+  margin-top: auto;
+} */
+
+/* .description-container {
+  max-width: 60rem;
+  padding-right: 10rem;
+  align-self: flex-start;
+} */
 
 .description-container {
-  padding-right: 14rem;
-  /* min-width: 40rem; */
-  /* display: flex; */
+  margin-right: 10rem;
+  max-width: 38rem;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
 }
+
 .flex-container {
   padding: 10rem 2rem;
   display: flex;
@@ -43,79 +67,6 @@
   height: 20rem;
 }
 
-/* toggle */
-
-.toggle-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin-right: 0.5rem;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: '';
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-.toggle-label {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #222;
-}
-/* toggle */
-
 /* smaller desktops */
 
 @media (max-width: 84em) {
@@ -123,37 +74,79 @@ input:checked + .slider:before {
     padding: 10rem 2rem;
     display: flex;
     justify-content: center;
-    /* width: 90%; */
+  }
+  .description {
+    font-size: 3rem;
+  }
+  .about-container {
+    display: flex;
+    flex-direction: column;
   }
   .description-container {
-    padding-right: 8rem;
-    /* min-width: 40rem; */
-    /* display: flex; */
+    margin-right: 4rem;
   }
+
   .slider-container {
     width: 28rem;
     height: 18rem;
+  }
+  .descriptionnn {
+    /* padding-right: 20rem; */
+  }
+}
+/* tablets */
+@media (max-width: 74em) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .description-container {
+    margin-right: 0;
+    align-self: center;
+    margin-bottom: 8rem;
+  }
+  .descriptionnn {
+    padding-top: 12rem;
   }
 }
 
 /* phones */
 @media (max-width: 40em) {
+  .about-container {
+    /* padding: 10rem; */
+    background-color: rgb(35, 35, 35);
+    height: 52rem;
+  }
   .flex-container {
-    /* padding: 0rem 2rem; */
+    padding-top: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: auto;
-    /* width: 90%; */
   }
   .description-container {
-    /* padding-right: 0; */
-    /* min-width: 40rem; */
-    /* display: flex; */
+    padding-right: 0;
   }
   .slider-container {
     width: 18rem;
     height: 14rem;
     padding-bottom: 4rem;
+  }
+  .description {
+    font-size: 2.4rem;
+    padding-top: 4rem;
+  }
+  .sub-description {
+    padding: 0.2rem 0 2rem 0;
+    font-size: 1.2rem;
+  }
+  .flex-container {
+    align-items: center;
+  }
+  .descriptionnn {
+    padding-top: 18rem;
+    /* align-items: flex-end; */
+    font-size: 1rem;
+    color: rgb(175, 175, 175);
   }
 }

@@ -128,11 +128,11 @@ function Navbar() {
         <a onClick={() => handleJumpToSection('work')}>WORK</a>
         <a onClick={() => handleJumpToSection('contact')}>CONTACT</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-          <FaTimes />
+          <FaTimes fill="white" />
         </button>
       </nav>
       <button className="nav-btn" onClick={showNavbar}>
-        <FaBars />
+        <FaBars fill="white" />
       </button>
     </header>
   );

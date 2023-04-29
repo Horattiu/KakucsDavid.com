@@ -66,20 +66,22 @@ const Contact = ({ isDarkTheme }) => {
       className={`contact-container ${isDarkTheme ? 'dark-theme' : ''}`}
     >
       <h1 className={`contact-title ${isDarkTheme ? 'dark-mode-text' : ''}`}>
-        Contact
+        reach out :)
       </h1>
       <div className="info-container">
-        <p className={`contact-info ${isDarkTheme ? 'dark-mode-text' : ''}`}>
-          <FiMail className="mail" />
-          davidko@gmail.com
+        <p
+          data-aos="fade-up"
+          className={`contact-info ${isDarkTheme ? 'dark-mode-text' : ''}`}
+        >
+          kakucsdavidaron@gmail.com
         </p>
         <p
+          data-aos="fade-up"
           className={`contact-info contact-info2 ${
             isDarkTheme ? 'dark-mode-text' : ''
           }`}
         >
-          <FaPhone className="phone" />
-          +40 074 234 121
+          +40 0745 236 775
         </p>
       </div>
 
@@ -99,7 +101,7 @@ const Contact = ({ isDarkTheme }) => {
             <FaBehance size={30} color="#dd2a7b" />
           </a>
           <a
-            href="https://www.instagram.com/daaviddivaad/"
+            href="https://www.instagram.com/davidkakucs/"
             target="_blank"
             rel="noopener noreferrer"
           >
